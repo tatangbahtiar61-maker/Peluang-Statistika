@@ -4,7 +4,7 @@
 <base target="_top">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Peluang-Statistika</title>f</title>
+<title>Matematika Interaktif</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
@@ -107,6 +107,70 @@ body[data-view=mobile] article>div.flex button{width:100%}
 .qn.ok{background:#16a34a;border-color:#16a34a;color:#fff}
 .qn.bad{background:var(--red);border-color:var(--red);color:#fff}
 .qn.cur{outline:3px solid var(--navy2);outline-offset:1px}
+
+/* ================= TAMPILAN MODERN ================= */
+body{background:linear-gradient(180deg,#e0e7ff 0,#f1f5f9 320px,#f8fafc 100%) fixed}
+header.sticky{background:rgba(15,23,42,.9)!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 6px 24px rgba(15,23,42,.25);border-bottom:2px solid rgba(220,38,38,.65)}
+#sidebar{background:linear-gradient(185deg,#070d1f 0%,#0f1d45 55%,#1e3a8a 130%)!important;box-shadow:6px 0 30px rgba(15,23,42,.25)}
+#sidebar>div:first-child{cursor:pointer;background:linear-gradient(135deg,rgba(220,38,38,.18),transparent)}
+.nav-item{border-radius:.7rem;padding:.55rem .8rem;transition:all .18s}
+button.nav-item:hover{background:rgba(255,255,255,.1);transform:translateX(3px)}
+.nav-item.active{background:linear-gradient(135deg,#ef4444,#dc2626);box-shadow:0 6px 16px rgba(220,38,38,.4)}
+.mode-btn{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);transition:all .18s}
+.mode-btn:hover{background:rgba(255,255,255,.16)}
+.mode-btn.active{background:linear-gradient(135deg,#ef4444,#dc2626);border-color:transparent;box-shadow:0 6px 16px rgba(220,38,38,.4)}
+.card{border-radius:1.15rem;box-shadow:0 8px 28px rgba(15,23,42,.08);border:1px solid rgba(148,163,184,.35)}
+.btn-red{background:linear-gradient(135deg,#ef4444,#dc2626);box-shadow:0 8px 18px rgba(220,38,38,.32);border-radius:.85rem;transition:transform .15s,box-shadow .15s}
+.btn-red:hover{background:linear-gradient(135deg,#f87171,#dc2626);transform:translateY(-2px);box-shadow:0 12px 22px rgba(220,38,38,.4)}
+.btn-navy{background:linear-gradient(135deg,#1e3a8a,#0f172a);box-shadow:0 6px 14px rgba(30,58,138,.3);border-radius:.85rem;transition:transform .15s}
+.btn-navy:hover{background:linear-gradient(135deg,#2548a8,#0f172a);transform:translateY(-2px)}
+.badge{background:linear-gradient(135deg,#ef4444,#dc2626);box-shadow:0 3px 8px rgba(220,38,38,.3);letter-spacing:.02em}
+.opt{border-radius:.85rem;transition:all .15s}
+.opt:hover{transform:translateX(3px);box-shadow:0 4px 12px rgba(30,58,138,.15)}
+.formula{background:linear-gradient(135deg,#fefce8,#fef9c3);box-shadow:0 4px 14px rgba(234,179,8,.2);border-radius:.9rem}
+.pembahasan{background:linear-gradient(135deg,#fffbeb,#fef9c3);border-radius:.9rem;box-shadow:0 3px 12px rgba(234,179,8,.15)}
+article h3{background:linear-gradient(90deg,#eff6ff,rgba(239,246,255,0));border-left-width:6px;padding:.5rem .9rem;border-radius:.6rem}
+/* banner judul setiap materi */
+article.card{padding-top:1.25rem}
+article>h2:first-child{margin:-1.25rem -1.25rem 1.4rem;padding:1.5rem 1.5rem 1.3rem 1.8rem;border:none;border-radius:1.15rem 1.15rem 0 0;color:#fff;position:relative;overflow:hidden;background:radial-gradient(circle at 85% 20%,rgba(59,130,246,.55),transparent 55%),linear-gradient(135deg,#0f172a 0%,#1e3a8a 70%,#2563eb 130%);font-size:1.75rem;line-height:1.25;text-shadow:0 2px 8px rgba(0,0,0,.25)}
+article>h2:first-child::before{content:'';position:absolute;left:0;top:0;bottom:0;width:7px;background:linear-gradient(180deg,#ef4444,#fbbf24)}
+article>h2:first-child::after{content:'\2211  \03C0  \222B  \221A';position:absolute;right:1rem;top:50%;transform:translateY(-50%);font-size:3rem;opacity:.13;letter-spacing:.5rem;white-space:nowrap;pointer-events:none}
+article>h2:first-child .crumb{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:#fde68a;background:rgba(255,255,255,.12);border:1px solid rgba(253,230,138,.35);padding:.2rem .65rem;border-radius:999px;margin-bottom:.55rem}
+article>h2:first-child mjx-container{color:#fff}
+/* beranda (landing) */
+.hero{position:relative;overflow:hidden;border-radius:1.6rem;padding:2.4rem 2rem;color:#fff;background:radial-gradient(circle at 12% 10%,rgba(239,68,68,.45),transparent 38%),radial-gradient(circle at 92% 85%,rgba(59,130,246,.55),transparent 45%),linear-gradient(135deg,#0b1224 0%,#13306e 65%,#1e3a8a 100%);box-shadow:0 22px 50px rgba(15,23,42,.35)}
+.hero::before{content:'';position:absolute;inset:0;opacity:1;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='190'%3E%3Cg fill='white' fill-opacity='.07' font-family='serif' font-size='38'%3E%3Ctext x='14' y='48'%3E%E2%88%91%3C/text%3E%3Ctext x='120' y='92'%3E%CF%80%3C/text%3E%3Ctext x='200' y='40'%3E%E2%88%AB%3C/text%3E%3Ctext x='40' y='150'%3E%E2%88%9A%3C/text%3E%3Ctext x='150' y='170'%3En!%3C/text%3E%3Ctext x='215' y='130'%3E%E2%88%9E%3C/text%3E%3C/g%3E%3C/svg%3E")}
+.hero>*{position:relative}
+.hero .pill{display:inline-flex;align-items:center;gap:.5rem;padding:.3rem .9rem;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);font-size:.78rem;font-weight:700;letter-spacing:.04em}
+.hero h1{font-size:clamp(2rem,6vw,3.2rem);font-weight:900;line-height:1.08;margin:.9rem 0 .6rem;letter-spacing:-.02em}
+.hero h1 .grad{background:linear-gradient(90deg,#fde047,#fb923c 60%,#f87171);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.hero p.lead{max-width:34rem;color:#dbeafe;line-height:1.7;font-size:1.02rem}
+.hero .cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.btn-ghost{padding:.6rem 1.1rem;border-radius:.85rem;font-weight:700;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);transition:all .15s}
+.btn-ghost:hover{background:rgba(255,255,255,.22);transform:translateY(-2px)}
+.hero .stats{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
+.hero .stat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:1rem;padding:.6rem 1.1rem;min-width:7.4rem;backdrop-filter:blur(4px)}
+.hero .stat b{display:block;font-size:1.55rem;color:#fde68a;line-height:1.1}
+.hero .stat span{font-size:.72rem;color:#bfdbfe;letter-spacing:.04em}
+.hero .herologo{position:absolute!important;right:1.4rem;top:1.2rem;width:84px;height:84px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1.3rem}
+.feat .fc{cursor:pointer;text-align:left;padding:1.2rem;border-radius:1.2rem;background:#fff;border:1px solid rgba(148,163,184,.35);box-shadow:0 8px 24px rgba(15,23,42,.08);transition:all .2s}
+.feat .fc:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(30,58,138,.18)}
+.feat .fc .ic{display:inline-flex;width:2.8rem;height:2.8rem;align-items:center;justify-content:center;border-radius:.9rem;font-size:1.4rem;color:#fff;margin-bottom:.6rem}
+.feat .fc b{display:block;font-size:1.05rem;color:#0f172a}
+.feat .fc span{font-size:.85rem;color:#475569;line-height:1.5}
+.sec{font-size:1.25rem;font-weight:800;color:#1e3a8a;margin:2rem 0 .8rem;display:flex;align-items:center;gap:.5rem}
+.sec::after{content:'';flex:1;height:3px;border-radius:3px;background:linear-gradient(90deg,#dc2626,transparent)}
+.chap{margin-bottom:1rem;padding:1.1rem 1.2rem}
+.chap h4{font-weight:800;color:#0f172a;margin-bottom:.6rem;font-size:1rem}
+.chip{display:inline-block;margin:.2rem .25rem .2rem 0;padding:.35rem .8rem;border-radius:999px;font-size:.82rem;font-weight:600;background:#eff6ff;color:#1e3a8a;border:1px solid #bfdbfe;transition:all .15s}
+.chip:hover{background:linear-gradient(135deg,#ef4444,#dc2626);color:#fff;border-color:transparent;transform:translateY(-2px);box-shadow:0 6px 14px rgba(220,38,38,.3)}
+#bottomnav{background:rgba(15,23,42,.95);backdrop-filter:blur(10px);border-top:2px solid #dc2626}
+#bottomnav button{font-size:.68rem}
+body[data-view=mobile] .hero{padding:1.6rem 1.2rem;border-radius:1.3rem}
+body[data-view=mobile] .hero .herologo{width:56px;height:56px;right:1rem;top:1rem}
+body[data-view=mobile] article>h2:first-child{font-size:1.3rem;margin:-.9rem -.9rem 1.1rem;padding:1.1rem 1rem 1rem 1.3rem}
+body[data-view=mobile] article>h2:first-child::after{font-size:2rem}
 </style>
 </head>
 <body>
@@ -115,7 +179,7 @@ body[data-view=mobile] article>div.flex button{width:100%}
 <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden"></div>
 
 <aside id="sidebar" class="fixed inset-y-0 left-0 w-72 z-40 text-white overflow-y-auto" style="background:var(--navy)">
-  <div class="p-4 border-b border-white/10 flex items-center gap-3">
+  <div class="p-4 border-b border-white/10 flex items-center gap-3" data-mode="beranda" title="Ke Beranda">
     <span id="sbLogo" class="logo" style="width:48px;height:48px"></span>
     <div><h1 class="font-extrabold leading-tight">Matematika Interaktif</h1>
     <p class="text-[11px] text-yellow-200" id="sbSekolah"></p></div>
@@ -140,6 +204,7 @@ body[data-view=mobile] article>div.flex button{width:100%}
     <div id="ftText"></div></footer>
 </div>
 <nav id="bottomnav">
+  <button id="bnBeranda" data-mode="beranda">🏠<br>Beranda</button>
   <button id="bnBelajar">📖<br>Belajar</button>
   <button id="bnLatihan">✏️<br>Latihan</button>
   <button id="bnTryout">🎯<br>Try Out</button>
@@ -310,7 +375,7 @@ function modNote() {
   return m.length ? `<div class="mt-6 p-2 rounded text-[11px]" style="background:#fef9c3;color:#713f12">File belum terbaca: <b>${m.join(', ')}</b>.<br>Normal jika belum dibuat. Jika sudah dibuat, cek nama filenya (persis seperti itu).</div>` : '';
 }
 function renderNav() {
-  qs('#nav').innerHTML = mode !== 'belajar'
+  qs('#nav').innerHTML = mode !== 'belajar' && mode !== 'beranda'
     ? '<p class="text-sm text-blue-200 mt-4 px-2">Pilih materi lewat menu dropdown di halaman utama.</p>'
     : KURIKULUM.map(b => `<div class="mt-4 text-xs font-bold tracking-wide text-yellow-200 px-2">${b.bab}</div>` +
       b.items.map(it => MATERI[it.id]
@@ -354,6 +419,7 @@ function openMateri(id) {
       ${prev ? `<button class="btn-navy" data-go="${prev}">◀ ${titleOf(prev)}</button>` : '<span></span>'}
       ${next ? `<button class="btn-red" data-go="${next}">${titleOf(next)} ▶</button>` : '<span></span>'}
     </div></article>`;
+  try { const hh = document.querySelector('#main article h2'), bb = KURIKULUM.find(b => b.items.some(i => i.id === id)); if (hh && hh.insertAdjacentHTML && bb) hh.insertAdjacentHTML('afterbegin', `<span class="crumb">${bb.bab} • Materi ${k + 1} dari ${ids.length}</span><br>`); } catch (err) {}
   try { if (m.init) m.init(); } catch (err) { showError('simulasi "' + titleOf(id) + '": ' + err.message); }
   try { fillDyn(id); const nb = qs('#dyn-new'); if (nb) nb.onclick = () => fillDyn(id); } catch (err) { showError('contoh dinamis: ' + err.message); }
   tex(qs('#main')); renderNav(); setBadge(); window.scrollTo(0, 0); drawer(false);
@@ -361,11 +427,12 @@ function openMateri(id) {
 function setBadge() {
   qs('#modeBelajar').classList.toggle('active', mode === 'belajar');
   qs('#modeLatihan').classList.toggle('active', mode === 'latihan');
+  qs('#bnBeranda').classList.toggle('active', mode === 'beranda');
   qs('#bnBelajar').classList.toggle('active', mode === 'belajar');
   qs('#bnLatihan').classList.toggle('active', mode === 'latihan');
   qs('#modeTryout').classList.toggle('active', mode === 'tryout');
   qs('#bnTryout').classList.toggle('active', mode === 'tryout');
-  qs('#modeBadge').textContent = { belajar: 'Mode Belajar', latihan: 'Mode Latihan', tryout: 'Try Out' }[mode];
+  qs('#modeBadge').textContent = { beranda: 'Beranda', belajar: 'Mode Belajar', latihan: 'Mode Latihan', tryout: 'Try Out' }[mode];
 }
 function diagnosis() {
   const raw = document.documentElement.innerHTML.indexOf('inclu' + "de('Materi") > -1;
@@ -376,7 +443,8 @@ function diagnosis() {
 }
 function setMode(m) {
   mode = m; setBadge();
-  if (m === 'belajar') {
+  if (m === 'beranda') { current = null; P = null; renderNav(); berandaHome(); }
+  else if (m === 'belajar') {
     const first = [].concat(...KURIKULUM.map(b => b.items)).find(i => MATERI[i.id]);
     if (first) openMateri(current && MATERI[current] ? current : first.id);
     else {
@@ -435,6 +503,28 @@ function startTO(v, lv) {
   showQ();
 }
 
+/* ---- Beranda (landing page) ---- */
+function berandaHome() {
+  qs('#judul').textContent = 'Matematika Interaktif';
+  const nBab = KURIKULUM.length, nMat = KURIKULUM.reduce((t, b) => t + b.items.length, 0), nJenis = window.GEN ? Object.keys(window.GEN).reduce((t, k) => t + window.GEN[k].length, 0) : 0;
+  const warna = ['#dc2626', '#1e3a8a', '#eab308', '#16a34a'];
+  qs('#main').innerHTML = `<section class="hero">
+    <span class="herologo logo">${logoHTML()}</span>
+    <span class="pill">🎓 ${CONFIG.sekolah}</span>
+    <h1>Matematika <span class="grad">Interaktif</span></h1>
+    <p class="lead">Belajar Kaidah Pencacahan, Peluang, dan Statistika lewat simulasi yang bisa dicoba, contoh soal bertahap, dan latihan yang selalu berganti angka.</p>
+    <div class="cta"><button class="btn-red" data-mode="belajar">📖 Mulai Belajar</button><button class="btn-ghost" data-mode="latihan">✏️ Latihan Soal</button><button class="btn-ghost" data-mode="tryout">🎯 Try Out</button></div>
+    <div class="stats"><div class="stat"><b>${nBab}</b><span>BAB MATERI</span></div><div class="stat"><b>${nMat}</b><span>SUB-MATERI</span></div><div class="stat"><b>${nMat}</b><span>SIMULASI INTERAKTIF</span></div><div class="stat"><b>${nJenis}</b><span>JENIS SOAL DINAMIS</span></div></div>
+    <p style="margin-top:1.3rem;font-weight:800;letter-spacing:.14em;font-size:.8rem;color:#fde68a">${CONFIG.motto.toUpperCase()}</p></section>
+  <div class="feat">
+    <div class="fc" data-mode="belajar"><span class="ic" style="background:linear-gradient(135deg,#1e3a8a,#2563eb)">📖</span><b>Belajar Interaktif</b><span>Konsep, rumus, simulasi, dan contoh soal dengan pembahasan langkah demi langkah.</span></div>
+    <div class="fc" data-mode="latihan"><span class="ic" style="background:linear-gradient(135deg,#ef4444,#dc2626)">✏️</span><b>Latihan Dinamis</b><span>Soal pilihan ganda yang angka dan konteksnya berubah tiap kali dimulai.</span></div>
+    <div class="fc" data-mode="tryout"><span class="ic" style="background:linear-gradient(135deg,#f59e0b,#eab308)">🎯</span><b>Try Out</b><span>Soal dari bank soal guru, disaring sesuai materi dan tingkatan.</span></div>
+  </div>
+  <h3 class="sec">📚 Daftar Materi</h3>
+  ${KURIKULUM.map((b, i) => `<div class="card chap" style="border-top:5px solid ${warna[i % 4]}"><h4>${b.bab}</h4>${b.items.map(it => MATERI[it.id] ? `<button class="chip" data-go="${it.id}">${it.t}</button>` : '').join('')}</div>`).join('')}`;
+  window.scrollTo(0, 0);
+}
 /* ---- Mode Latihan ---- */
 function latihanHome() {
   qs('#judul').textContent = 'Latihan Soal Terfokus';
@@ -2946,12 +3036,12 @@ qs('#bnBelajar').onclick = () => setMode('belajar');
 qs('#bnLatihan').onclick = () => setMode('latihan');
 qs('#bnTryout').onclick = () => setMode('tryout');
 qs('#bnMenu').onclick = () => drawer(true);
-document.addEventListener('click', e => { const g = e.target.closest('[data-go]'); if (g) openMateri(g.dataset.go); });
+document.addEventListener('click', e => { const g = e.target.closest('[data-go]'); if (g) { openMateri(g.dataset.go); return; } const md = e.target.closest('[data-mode]'); if (md) { setMode(md.dataset.mode); drawer(false); } });
 qs('#modeBelajar').onclick = () => { setMode('belajar'); drawer(false); };
 qs('#modeLatihan').onclick = () => { setMode('latihan'); drawer(false); };
 qs('#modeTryout').onclick = () => { setMode('tryout'); drawer(false); };
 qs('#nav').onclick = e => { const b = e.target.closest('button[data-id]'); if (b) openMateri(b.dataset.id); };
-setMode('belajar');
+setMode('beranda');
 loadBank();
 </script>
 </body>
