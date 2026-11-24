@@ -145,6 +145,7 @@ article>h2:first-child mjx-container{color:#fff}
 .hero h1{font-size:clamp(2rem,6vw,3.2rem);font-weight:900;line-height:1.08;margin:.9rem 0 .6rem;letter-spacing:-.02em}
 .hero h1 .grad{background:linear-gradient(90deg,#fde047,#fb923c 60%,#f87171);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .hero p.lead{max-width:34rem;color:#dbeafe;line-height:1.7;font-size:1.02rem}
+.hero p.lead.subj{font-size:clamp(1.1rem,3.6vw,1.55rem);font-weight:700;color:#fff;max-width:none;line-height:1.35;margin-top:.2rem;text-shadow:0 2px 10px rgba(0,0,0,.3)}
 .hero .cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
 .btn-ghost{padding:.6rem 1.1rem;border-radius:.85rem;font-weight:700;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);transition:all .15s}
 .btn-ghost:hover{background:rgba(255,255,255,.22);transform:translateY(-2px)}
@@ -505,14 +506,14 @@ function startTO(v, lv) {
 
 /* ---- Beranda (landing page) ---- */
 function berandaHome() {
-  qs('#judul').textContent = 'Matematika Interaktif';
+  qs('#judul').textContent = 'Pembelajaran Digital';
   const nBab = KURIKULUM.length, nMat = KURIKULUM.reduce((t, b) => t + b.items.length, 0), nJenis = window.GEN ? Object.keys(window.GEN).reduce((t, k) => t + window.GEN[k].length, 0) : 0;
   const warna = ['#dc2626', '#1e3a8a', '#eab308', '#16a34a'];
   qs('#main').innerHTML = `<section class="hero">
     <span class="herologo logo">${logoHTML()}</span>
     <span class="pill">🎓 ${CONFIG.sekolah}</span>
-    <h1>Matematika <span class="grad">Interaktif</span></h1>
-    <p class="lead">Belajar Kaidah Pencacahan, Peluang, dan Statistika lewat simulasi yang bisa dicoba, contoh soal bertahap, dan latihan yang selalu berganti angka.</p>
+    <h1>Pembelajaran <span class="grad">Digital</span></h1>
+    <p class="lead subj">“Kaidah Pencacahan, Peluang, dan Statistika”</p>
     <div class="cta"><button class="btn-red" data-mode="belajar">📖 Mulai Belajar</button><button class="btn-ghost" data-mode="latihan">✏️ Latihan Soal</button><button class="btn-ghost" data-mode="tryout">🎯 Try Out</button></div>
     <div class="stats"><div class="stat"><b>${nBab}</b><span>BAB MATERI</span></div><div class="stat"><b>${nMat}</b><span>SUB-MATERI</span></div><div class="stat"><b>${nMat}</b><span>SIMULASI INTERAKTIF</span></div><div class="stat"><b>${nJenis}</b><span>JENIS SOAL DINAMIS</span></div></div>
     <p style="margin-top:1.3rem;font-weight:800;letter-spacing:.14em;font-size:.8rem;color:#fde68a">${CONFIG.motto.toUpperCase()}</p></section>
